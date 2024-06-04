@@ -11,17 +11,16 @@ function App() {
 
   return (
     <div>
-      {data && data.map((repository: Repository) => (
-        <Card
-          repository={repository}
-          key={repository.id}
-          isFavorite={favoriteReposIds.includes(repository.id)}
-        />
-      ))}
+      {data &&
+        data.map((repository: Repository) => (
+          <Card
+            repository={repository}
+            key={repository.id}
+            isFavorite={favoriteReposIds.includes(repository.id)}
+          />
+        ))}
     </div>
   );
 }
 
 export default App;
-
-
